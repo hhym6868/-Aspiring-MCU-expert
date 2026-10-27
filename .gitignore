@@ -1,0 +1,17 @@
+# Runtime user data
+data/settings.json
+data/user_tools.json
+
+# Build artifacts
+source/bin/
+source/obj/
+.vs/
+*.user
+*.suo
+
+# Temporary files
+*.tmp
+*.log
+Thumbs.db
+desktop.ini
+

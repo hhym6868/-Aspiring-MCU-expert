@@ -1,0 +1,28 @@
+﻿源码构建说明
+======================================================================
+
+环境：
+  Windows 10 / 11 x64
+  .NET SDK 10
+  .NET Windows Desktop Runtime / WPF
+
+构建：
+  dotnet build DreamMcuToolbox.csproj -c Debug
+
+发布自包含单文件：
+  dotnet publish DreamMcuToolbox.csproj -c Release -r win-x64 --self-contained true `
+    -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true `
+    -p:EnableCompressionInSingleFile=true -o ..\publish
+
+源码文件：
+  App.xaml / App.xaml.cs
+  MainWindow.xaml / MainWindow.xaml.cs
+  Models\ToolModels.cs
+  Services\InstalledAppScanner.cs
+  Services\LaunchService.cs
+  Services\StorageServices.cs
+  catalog.json
+  Assets\app.ico
+
+修改 catalog.json 可增减软件，不需要改动启动器代码。
+第三方软件仍归各自权利人所有，交付包不包含其安装包。
